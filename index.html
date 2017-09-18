@@ -1,0 +1,15 @@
+---
+layout: default
+title: Home
+description: Another fine responsive<br />site template freebie<br />crafted by <a href="http://html5up.net">HTML5 UP</a>.
+---
+
+<!-- Loop through sections -->
+{% assign sections = site.sections | sort: 'order' %}
+{% for section in sections %}
+  {% if section.include != null %}
+    {% include {{ section.include }} %}
+  {% else %}
+    {% include sections/default.html %}
+  {% endif %}
+{% endfor %}

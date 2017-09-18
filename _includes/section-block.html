@@ -1,0 +1,11 @@
+<section id="{{ section.title | slugify }}" class="wrapper style1 special">
+	<div class="inner">
+		<header class="major">
+			<h2>{{ section.title }}</h2>
+			{% unless section.description == blank %}
+			    </br>{{ section.description }}
+			{% endunless %}
+		</header>
+		{{ section.content }}
+	</div>
+</section>
